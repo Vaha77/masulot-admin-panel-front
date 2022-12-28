@@ -140,8 +140,8 @@ Container.body = styled.div`
                 outline:none;
                 font-size: 20px;
                 text-transform: capitalize;
-                :active{
-                    opacity: .8;
+                :hover{
+                    background-color: #e8e8e8;
                 }
             }
         }
