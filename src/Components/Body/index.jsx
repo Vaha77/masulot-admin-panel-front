@@ -2,9 +2,9 @@ import React from "react";
 import { Carddata } from "../../Mock/products";
 import { Bodycard, BodyItem, Cardflex, CardText, Stars } from "./style";
 
-const Body = () => {
+const Body = ({active}) => {
   return (
-    <BodyItem>
+    <BodyItem active={active}>
       {Carddata.map((item) => {
         return (
           <Bodycard key={item.id}>

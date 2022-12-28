@@ -10,7 +10,7 @@ export const Carddata = [
     id: 1,
     img: sunglasses,
     title: "Quyosh ko’zoynagi",
-    description: "Quyosh nurini toʻ suvchi bardoshli linzlarning mukammal",
+    description: "Quyosh nurini toʻ suvchi bardoshli linzlar",
     stars: star,
     residual: "Qoldi 50",
     price: "Narxi: 169000 So'm",
@@ -50,5 +50,14 @@ export const Carddata = [
     stars: star,
     residual: "Qoldi 50",
     price: "Narxi: 169000 So'm",
+  },
+  {
+    id: 6,
+    img: kamera,
+    title: "Kamera299",
+    description: "Telefon, kompyuter orqali onlayn koʻrib turish mumkin",
+    stars: star,
+    residual: "Qoldi 19",
+    price: "Narxi: 299000 So'm",
   },
 ];
