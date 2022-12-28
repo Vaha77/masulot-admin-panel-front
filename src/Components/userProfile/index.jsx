@@ -45,9 +45,7 @@ export const UserProfile = ({ setHidden, hidden }) => {
                 </Container.ProfileOptions>
             </Container>
         </>
-
     )
 }
-
 
 export default UserProfile

@@ -67,15 +67,13 @@ Container.Links = styled.div`
       line-height: 24px;
       margin-left: 10px;
     }
-    /* :hover{
-        background-color:#001869;
+
+    :hover{
+        background-color: #001869 !important;
         .title{
             color:white;
         }
-        img{
-            filter: drop-shadow(0 0 10px white)	;
-        }
-    } */
+    }
     border-radius: 4px;
   }
 `;
