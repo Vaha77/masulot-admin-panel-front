@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "."
+		},
+		{
+			"name": "mahsulot-admin-front",
+			"path": "../../mahsulot-admin-front"
+		}
+	],
+	"settings": {}
+}
