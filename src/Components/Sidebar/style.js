@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+    position: sticky;
     display:${({ hidden }) => (hidden ? 'flex' : 'none')};
     flex-direction: column;
     width:350px;
     background-color: white;
     padding: 30px 30px;
-    height: 100vh;
-    position: sticky;
+    min-height: 100vh;
     top: 0;
     left: 0;
 `
@@ -42,15 +42,12 @@ Container.Links = styled.div`
             line-height: 24px;
             margin-left:10px;
         }
-    /* :hover{
-        background-color:#001869;
+    :hover{
+        background-color: #001869 !important;
         .title{
             color:white;
         }
-        img{
-            filter: drop-shadow(0 0 10px white)	;
-        }
-    } */
+    }
     border-radius: 4px;
     }
 `

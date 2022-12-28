@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { Container } from './style'
 import { sidebarPages,ProductsPanel } from '../../Utils/sidebar'
@@ -16,8 +16,8 @@ const Sidebar = ({ active }) => {
             ProductsPanel.map((item) => {
               return <NavLink
                 key={item.id}
-                style={({ isActive }) => ({ backgroundColor: isActive ? '#001869' : 'white', color: isActive ? 'white' : '#001869' })}
                 className={'link'}
+                style={({ isActive }) => ({ backgroundColor: isActive ? '#001869' : 'white', color: isActive ? 'white' : '#001869' })}
                 to={item.path} >
                 <img src={item.icon} alt="" />
                 <p className="title">

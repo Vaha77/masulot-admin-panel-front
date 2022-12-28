@@ -4,7 +4,7 @@ const NavbarItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 27px 0 32px;
+  padding: 27px 20px 32px 20px;
   position: relative;
   position: sticky;
   top: 0;

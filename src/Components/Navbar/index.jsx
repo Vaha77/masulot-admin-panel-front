@@ -20,7 +20,7 @@ import UserProfile from "../userProfile";
 import ProductsAdd from "../ProductsAdd";
 const Navbar = ({ setActive, active }) => {
   const [hidden, setHidden] = useState(false)
-  const [Productadd, setAdd] = useState(false)
+  const [Productadd, setAdd] = useState(true)
   return (
     <>
       <NavbarItem>
