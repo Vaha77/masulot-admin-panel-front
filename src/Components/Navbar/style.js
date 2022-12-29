@@ -4,13 +4,16 @@ const NavbarItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 27px 20px 32px 20px;
+  padding: 27px 20px 60px 20px;
   position: relative;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 10;
   background-color: #e8e8e8;
+  @media (max-width: 976px) {
+    padding: 27px 5px 60px;
+  }
 `;
 
 const Menu = styled.div`
@@ -27,7 +30,7 @@ const InputForm = styled.div`
   border: 1px solid #e4e4e4;
   border-radius: 23px;
   padding: 11px 24px;
-  width: 500px;
+  position: relative;
   @media (max-width: 1100px) {
     width: 380px;
   }
@@ -40,8 +43,10 @@ const InputForm = styled.div`
     transform: translateX(-50%);
     top: 72px;
     padding: 8px 20px;
+    z-index: 10;
   }
   input {
+    width: 500px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -60,6 +65,18 @@ const InputForm = styled.div`
       padding: 5px 20px;
     } */
     /* display: none; */
+  }
+  span {
+    font-size: 25px;
+    color: #001869;
+    cursor: pointer;
+  }
+  img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 `;
 const NavbarEnd = styled.div`
@@ -103,6 +120,7 @@ const Profil = styled.div`
     color: #000000;
     padding: 0 3px 0 8px;
     cursor: pointer;
+    white-space: nowrap;
   }
 `;
 

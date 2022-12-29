@@ -24,6 +24,15 @@ const Container = styled.div`
   left: 0;
   transition: all 0.3s ease-in-out;
   transform: translateX(${({ hidden }) => (hidden ? "0px" : "-200%")});
+  .cancel {
+    img {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
 
   @media (max-width: 500px) {
     width: 225px;
@@ -68,11 +77,11 @@ Container.Links = styled.div`
       margin-left: 10px;
     }
 
-    :hover{
-        background-color: #001869 !important;
-        .title{
-            color:white;
-        }
+    :hover {
+      background-color: #001869 !important;
+      .title {
+        color: white;
+      }
     }
     border-radius: 4px;
   }
