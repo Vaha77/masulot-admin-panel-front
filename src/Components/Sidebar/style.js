@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-const Blur = styled.div`
-  width: 0;
-  @media (max-width: 500px) {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-`;
 
 const Container = styled.div`
   display: flex;
@@ -46,28 +36,27 @@ Container.Title = styled.p`
   margin: 20px 0 10px 0;
 `;
 Container.Links = styled.div`
-  display: flex;
-  flex-direction: column;
-  .link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    height: 40px;
-    padding: 12px 10px;
-    transition: 0.3s;
-    img {
-      width: 15px;
-    }
-    .title {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      color: "#001869";
-      line-height: 24px;
-      margin-left: 10px;
-    }
-
+    display:flex;
+    flex-direction: column;
+    .link{
+        display:flex;
+        align-items:center;
+        text-decoration:none;
+        height: 40px;
+        padding: 12px 10px;
+        transition: .3s;
+        img{
+            width:15px;
+        }
+        .title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: '#001869';
+            line-height: 24px;
+            margin-left:10px;
+        }
     :hover{
         background-color: #001869 !important;
         .title{
@@ -75,6 +64,8 @@ Container.Links = styled.div`
         }
     }
     border-radius: 4px;
+    }
+    border-radius: 4px;
   }
 `;
-export { Container, Blur };
+export { Container };

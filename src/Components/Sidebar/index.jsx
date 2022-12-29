@@ -1,14 +1,14 @@
-import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import { Blur, Container } from "./style";
-import { sidebarPages, ProductsPanel } from "../../Utils/sidebar";
+import React, { useState } from 'react'
+import { NavLink, Outlet } from 'react-router-dom'
+import { Container } from './style'
+import { sidebarPages,ProductsPanel } from '../../Utils/sidebar'
 
 import logo from "../../Assets/logo/logo.svg";
 
 const Sidebar = ({ active, setActive }) => {
   return (
     <>
-      <Blur onClick={() => setActive(false)}></Blur>
+      <div onClick={() => setActive(false)}></div>
       <Container hidden={active}>
         <img src={logo} className={"logo"} alt="" />
         <Container.Title>Mahsulotlar paneli</Container.Title>
@@ -17,13 +17,9 @@ const Sidebar = ({ active, setActive }) => {
             return (
               <NavLink
                 key={item.id}
-                style={({ isActive }) => ({
-                  backgroundColor: isActive ? "#001869" : "white",
-                  color: isActive ? "white" : "#001869",
-                })}
-                className={"link"}
-                to={item.path}
-              >
+                className={'link'}
+                style={({ isActive }) => ({ backgroundColor: isActive ? '#001869' : 'white', color: isActive ? 'white' : '#001869' })}
+                to={item.path} >
                 <img src={item.icon} alt="" />
                 <p className="title">{item.title}</p>
               </NavLink>

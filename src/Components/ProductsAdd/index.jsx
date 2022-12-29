@@ -1,16 +1,18 @@
 /* eslint-disable react/jsx-pascal-case */
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, BigContainer, Main } from './style'
 import downl from '../../Assets/img/icon/downl.svg'
+import cancel from '../../Assets/img/cancel.svg'
 import info from '../../Assets/img/icon/info.svg'
 import money from '../../Assets/img/icon/money.svg'
 import note from '../../Assets/img/icon/note.svg'
 import btn from '../../Assets/img/icon/btm-btn.svg'
-
+import categories from '../../Mock/categories'
 export const ProductsAdd = ({ setAdd, add }) => {
+  const [catagery, setCategary] = useState(false)
+  const [catageryname] = useState(categories[0].name)
   return (
     <>
-      <Main onClick={() => setAdd(!add)} ></Main>
       <BigContainer>
         <Container>
           <Container.title>
@@ -33,17 +35,31 @@ export const ProductsAdd = ({ setAdd, add }) => {
               <div className="input">
                 <img className='icon' src={note} alt="" />
                 <input type="text" className='inp' />
+
+              </div>
+            </div>
+            <div className="input-con">
+              <p className="input-tit">
+                Kategoriya
+              </p>
+              <div className="input">
+                <img className='icon' src={note} alt="" />
+                <div className="slc-cat">{catageryname}</div>
                 <div className="btnwrap">
-                  <img className='btn' src={btn} alt="" />
+                  <img src={btn} onClick={() => setCategary(!catagery)} className='btn' alt="" />
                 </div>
               </div>
-              <div className="products">
-                <button className="pr">Sovgalar</button>
-                <button className="pr">smart watch</button>
-                <button className="pr">avtomabilalr</button>
-                <button className="pr">foydali maxsulot</button>
-                <button className="pr">telefonlar</button>
+              <div className="catagery">
+                {categories.map((i)=>{
+                  return <p className="ctg">{i.name}</p> 
+                })}
               </div>
+              {/* <select className='input' name="" id="">
+                  <img className='icon' src={money} alt="" />
+                  {categories.map((item) => {
+                    return <option className='inp'>{item.name}</option>
+                  })}
+                </select> */}
             </div>
             <div className="input-con">
               <p className="input-tit">
@@ -63,10 +79,11 @@ export const ProductsAdd = ({ setAdd, add }) => {
                 <input type="number" className='inp' />
               </div>
             </div>
-          </Container.body>
-          {/* <Container.btns> */}
 
-          {/* </Container.btns> */}
+          </Container.body>
+          <Container.btns>
+
+          </Container.btns>
         </Container>
       </BigContainer>
     </>

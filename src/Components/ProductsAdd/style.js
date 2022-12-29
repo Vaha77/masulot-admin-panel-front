@@ -42,7 +42,7 @@ const Container = styled.div`
     border-radius: 16px;
     z-index:999;
     margin: auto auto;
-    padding: 32px;
+    padding: 15px 32px;
 `
 
 Container.title = styled.p`
@@ -50,7 +50,6 @@ Container.title = styled.p`
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 36px;
     color: #001869;
     text-align: center;
 `
@@ -62,11 +61,11 @@ Container.body = styled.div`
     gap: 10px;
     height: 83%;
     border: 1px solid red;
-    padding: 5px;
+    /* padding: 5px; */
     align-items: center;
     width: 100%;
     .input-con{
-        height: 15%;
+        height: 10%;
         position: relative;
         width: 95%;
         .input-tit{
@@ -96,7 +95,7 @@ Container.body = styled.div`
                 height: 100%;
                 width: 100%;
                 background-color: transparent;
-                font-size: 22px;
+                font-size: 20px;
                 padding: 5px;
                 padding-left: 50px;
                 border: none;
@@ -108,46 +107,38 @@ Container.body = styled.div`
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 width: 50px;
                 .btn{
                     width: 20px;
                     padding: 5px;
                 }
             }
+            .slc-cat{
+                width: 90%;
+                max-width: 100%;
+                /* text-align:center; */
+                font-size: 22px;
+                padding: 5px;
+                padding-left: 50px;
+            }
         }
-        .products{
-            z-index: 20;
-            background: #FBFBFB;
+        .catagery{
+            width: 420px;
+            max-height: 150px;
             height: 150px;
             overflow: auto;
-            border: 0.5px solid #E1E1E1;
+            z-index: 999;
+            background-color: #e8e8e8;
             position: sticky;
-            display: flex;
-            border-radius: 5px;
-
-            gap: 1px;
-            flex-direction: column;
-            position: absolute;
-            min-width: 50%;
-            max-width: 100%;
-            right: 0;
-            .pr{
-                padding: 5px;
-                background-color: #FBFBFB;
-                border: 1px solid #E1E1E1;
-                border-radius: 2px;
-                outline:none;
-                font-size: 20px;
-                text-transform: capitalize;
-                :active{
-                    opacity: .8;
-                }
+            display: grid;
+            .ctg{
+                height: 25%;
             }
         }
     }
 `
 
 Container.btns = styled.div``
+
 
 export { Main, Container, BigContainer }

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Main } from './style'
 import cancel from '../../Assets/img/cancel.svg'
 import profile from '../../Assets/img/profile.svg'
-// import person from '../../Assets/img/person.svg'
+import person from '../../Assets/img/person.svg'
 import { options as opts } from './option-data.js'
 import { Link } from 'react-router-dom'
 
