@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react'
-import { Container, BigContainer, Main, Btns } from './style'
+import { Container, BigContainer, Btns } from './style'
 import downl from '../../Assets/img/icon/downl.svg'
 import info from '../../Assets/img/icon/info.svg'
 import money from '../../Assets/img/icon/money.svg'

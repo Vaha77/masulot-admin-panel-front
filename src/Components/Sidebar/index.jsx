@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
-import { Container } from './style'
-import { sidebarPages,ProductsPanel } from '../../Utils/sidebar'
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import { Container } from "./style";
+import { sidebarPages, ProductsPanel } from "../../Utils/sidebar";
 
 import logo from "../../Assets/logo/logo.svg";
 import cancel from "../../Assets/img/cancel.svg";
@@ -9,7 +9,6 @@ import cancel from "../../Assets/img/cancel.svg";
 const Sidebar = ({ active, setActive }) => {
   return (
     <>
-      <div onClick={() => setActive(false)}></div>
       <Container hidden={active}>
         <div className="cancel">
           <img onClick={() => setActive(false)} src={cancel} alt="" />

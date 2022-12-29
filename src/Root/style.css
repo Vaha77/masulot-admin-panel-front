@@ -7,6 +7,9 @@
   transition: .3s;
         
 }
+a {
+  text-decoration: none;
+}
 .div {
   display: flex;
   min-height: 100vh;

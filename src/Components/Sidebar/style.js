@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,6 +20,10 @@ const Container = styled.div`
       right: 10px;
       width: 20px;
       cursor: pointer;
+      display: none;
+      @media (max-width: 500px) {
+        display: block;
+      }
     }
   }
 
