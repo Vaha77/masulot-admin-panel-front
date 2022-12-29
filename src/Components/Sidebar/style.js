@@ -14,6 +14,15 @@ const Container = styled.div`
   left: 0;
   transition: all 0.3s ease-in-out;
   transform: translateX(${({ hidden }) => (hidden ? "0px" : "-200%")});
+  .cancel {
+    img {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
 
   @media (max-width: 500px) {
     width: 225px;
@@ -36,32 +45,33 @@ Container.Title = styled.p`
   margin: 20px 0 10px 0;
 `;
 Container.Links = styled.div`
-    display:flex;
-    flex-direction: column;
-    .link{
-        display:flex;
-        align-items:center;
-        text-decoration:none;
-        height: 40px;
-        padding: 12px 10px;
-        transition: .3s;
-        img{
-            width:15px;
-        }
-        .title{
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            color: '#001869';
-            line-height: 24px;
-            margin-left:10px;
-        }
-    :hover{
-        background-color: #001869 !important;
-        .title{
-            color:white;
-        }
+  display: flex;
+  flex-direction: column;
+  .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    padding: 12px 10px;
+    transition: 0.3s;
+    img {
+      width: 15px;
+    }
+    .title {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: "#001869";
+      line-height: 24px;
+      margin-left: 10px;
+    }
+
+    :hover {
+      background-color: #001869 !important;
+      .title {
+        color: white;
+      }
     }
     border-radius: 4px;
     }

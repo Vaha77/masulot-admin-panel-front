@@ -4,12 +4,16 @@ import { Container } from './style'
 import { sidebarPages,ProductsPanel } from '../../Utils/sidebar'
 
 import logo from "../../Assets/logo/logo.svg";
+import cancel from "../../Assets/img/cancel.svg";
 
 const Sidebar = ({ active, setActive }) => {
   return (
     <>
       <div onClick={() => setActive(false)}></div>
       <Container hidden={active}>
+        <div className="cancel">
+          <img onClick={() => setActive(false)} src={cancel} alt="" />
+        </div>
         <img src={logo} className={"logo"} alt="" />
         <Container.Title>Mahsulotlar paneli</Container.Title>
         <Container.Links>

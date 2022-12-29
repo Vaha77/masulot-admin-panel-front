@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   NavbarItem,
   Menu,
@@ -19,8 +19,21 @@ import profil from "../../Assets/img/profil.png";
 import UserProfile from "../userProfile";
 import ProductsAdd from "../ProductsAdd";
 const Navbar = ({ setActive, active }) => {
-  const [hidden, setHidden] = useState(false)
-  const [Productadd, setAdd] = useState(true)
+  const [hidden, setHidden] = useState(false);
+  const [Productadd, setAdd] = useState(false);
+  const [search, setSearch] = useState(false);
+  const inputRef = useRef(null);
+  const inputFocus = () => {
+    inputRef.current.focus();
+  };
+
+  const inputSearch = (e) => {
+    setSearch(true);
+    if (e.target.value === "") {
+      setSearch(false);
+    }
+  };
+
   return (
     <>
       <NavbarItem>
@@ -28,8 +41,15 @@ const Navbar = ({ setActive, active }) => {
           <img src={menuimg} alt="menu" />
         </Menu>
         <InputForm>
-          <input type="search" placeholder="Search" name="" id="" />
-          <img src={searchIcon} alt="" />
+          <input
+            ref={inputRef}
+            type="search"
+            placeholder="Search"
+            name=""
+            id=""
+            onChange={inputSearch}
+          />
+          {search ? null : <img onClick={inputFocus} src={searchIcon} alt="" />}
         </InputForm>
         <NavbarEnd>
           <Bgflex>
@@ -40,19 +60,15 @@ const Navbar = ({ setActive, active }) => {
               <img src={filter} alt="" />
             </Bg>
           </Bgflex>
-          <Profil onClick={() => setHidden(!hidden)} >
+          <Profil onClick={() => setHidden(!hidden)}>
             <img src={profil} alt="" />
             <h2>Musa Designer</h2>
             <img src={downloadUrl} alt="" />
           </Profil>
         </NavbarEnd>
       </NavbarItem>
-      {
-        hidden ? <UserProfile setHidden={setHidden} hidden={hidden} /> : ''
-      }
-      {
-        Productadd ? <ProductsAdd setAdd={setAdd} add={add} /> : ''
-      }
+      {hidden ? <UserProfile setHidden={setHidden} hidden={hidden} /> : ""}
+      {Productadd ? <ProductsAdd setAdd={setAdd} add={add} /> : ""}
     </>
   );
 };
