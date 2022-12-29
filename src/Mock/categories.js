@@ -1,31 +1,39 @@
 const categories = [
     {
         id:1,
-        name: 'Medtexnika'
+        name: 'Medtexnika',
+        icon: '👌',
     },
     {
         id:2,
-        name: 'Sovg`alar'
+        name: 'Sovg`alar',
+        icon: '👌',
     },
     {
         id:3,
-        name: 'Uy-hovli uchun'
+        name: 'Uy-hovli uchun',
+        icon: '👌',
     },
     {
         id:4,
-        name: 'smart watch'
+        name: 'smart watch',
+        icon: '👌',
     },
     {
         id:5,
-        name: 'automobillar uchun'
+        name: 'automobillar uchun',
+        icon: '👌',
     },
     {
         id:6,
-        name: 'foydali mahsulotlar'
+        name: 'foydali mahsulotlar',
+        icon: '👌',
     },
     {
         id:7,
-        name: 'erkaklar uchun'
+        name: 'erkaklar uchun',
+        icon: '👌',
     },
+    
 ]
 export default categories

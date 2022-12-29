@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   transition: .3s;
+        
 }
 .div {
   display: flex;
@@ -22,11 +23,13 @@
 *::-webkit-scrollbar {
   width: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: rgba(128, 128, 128, 0.486);
   border-radius: 25px;
+  cursor: pointer;
 }
 
 *::selection {
