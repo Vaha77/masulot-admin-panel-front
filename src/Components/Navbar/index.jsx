@@ -40,7 +40,7 @@ const Navbar = ({ setActive, active }) => {
         <Menu onClick={() => setActive(!active)}>
           <img src={menuimg} alt="menu" />
         </Menu>
-        <InputForm>
+        <InputForm active={active}>
           <input
             ref={inputRef}
             type="search"

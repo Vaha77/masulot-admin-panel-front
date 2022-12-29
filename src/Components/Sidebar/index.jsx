@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { Blur, Container } from "./style";
+import { Container } from "./style";
 import { sidebarPages, ProductsPanel } from "../../Utils/sidebar";
 
 import logo from "../../Assets/logo/logo.svg";
@@ -9,7 +9,6 @@ import cancel from "../../Assets/img/cancel.svg";
 const Sidebar = ({ active, setActive }) => {
   return (
     <>
-      <Blur onClick={() => setActive(false)}></Blur>
       <Container hidden={active}>
         <div className="cancel">
           <img onClick={() => setActive(false)} src={cancel} alt="" />

@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-const Blur = styled.div`
-  width: 0;
-  @media (max-width: 500px) {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-`;
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,6 +20,10 @@ const Container = styled.div`
       right: 10px;
       width: 20px;
       cursor: pointer;
+      display: none;
+      @media (max-width: 500px) {
+        display: block;
+      }
     }
   }
 
@@ -86,4 +79,4 @@ Container.Links = styled.div`
     border-radius: 4px;
   }
 `;
-export { Container, Blur };
+export { Container };

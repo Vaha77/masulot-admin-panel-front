@@ -13,6 +13,7 @@ const NavbarItem = styled.div`
   background-color: #e8e8e8;
   @media (max-width: 976px) {
     padding: 27px 5px 60px;
+    gap: 30px;
   }
 `;
 
@@ -31,13 +32,15 @@ const InputForm = styled.div`
   border-radius: 23px;
   padding: 11px 24px;
   position: relative;
+  transition: all 0.3s ease-in-out;
   @media (max-width: 1100px) {
     width: 380px;
   }
   @media (max-width: 976px) {
-    width: auto;
+    width: 100%;
   }
   @media (max-width: 500px) {
+    width: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -45,6 +48,7 @@ const InputForm = styled.div`
     padding: 8px 20px;
     z-index: 10;
   }
+
   input {
     width: 500px;
     font-style: normal;
@@ -55,16 +59,9 @@ const InputForm = styled.div`
     border: none;
     outline: none;
     background: transparent;
-    /* @media (max-width: 750px) {
-      position: absolute;
-      left: 50px;
-      top: 75px;
-      background: rgba(82, 136, 193, 0.1);
-      border: 1px solid #e4e4e4;
-      border-radius: 23px;
-      padding: 5px 20px;
-    } */
-    /* display: none; */
+    @media (max-width: 976px) {
+      width: auto;
+    }
   }
   span {
     font-size: 25px;
