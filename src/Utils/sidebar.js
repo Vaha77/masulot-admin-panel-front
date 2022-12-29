@@ -1,4 +1,4 @@
-import shop from '../Assets/img/shop.svg'
+// import shop from '../Assets/img/shop.svg'
 import aperatorlar from '../Assets/img/aperatorlar.svg'
 import haridorlar from '../Assets/img/person.svg'
 import mahsulotlar from '../Assets/img/mahsulotlar.svg'

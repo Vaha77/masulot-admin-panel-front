@@ -3,7 +3,8 @@ import styled from "styled-components";
 const media = {
     laptop: '@media (max-width: 1240px)',
     tablet: '@media (max-width: 768px)',
-    mobileM: '@media (max-width: 400px)',
+    mobileL: '@media (max-width: 510px)',
+    mobileM: '@media (max-width: 360px)',
     mobileS: '@media (max-width: 320px)',
 }
 
@@ -33,6 +34,7 @@ const BigContainer = styled.div`
     justify-content: center;
 `
 
+
 const Container = styled.div`
     position: absolute;
     top: 30px;
@@ -43,6 +45,18 @@ const Container = styled.div`
     z-index:999;
     margin: auto auto;
     padding: 15px 32px;
+    ${media.mobileL}{
+        width: 350px;
+        height: 500px;
+    }
+    ${media.mobileM}{
+        width: 300px;
+        height: 500px;
+    }
+    /* ${media.mobileL}{
+        width: 400px;
+        height: 500px;
+    } */
 `
 
 Container.title = styled.p`
@@ -60,7 +74,6 @@ Container.body = styled.div`
     justify-content: space-evenly;
     gap: 10px;
     height: 83%;
-    border: 1px solid red;
     /* padding: 5px; */
     align-items: center;
     width: 100%;
@@ -76,6 +89,9 @@ Container.body = styled.div`
             line-height: 24px;
             color: #000000;
             opacity: 0.8;
+        }
+        .cursorp{
+            cursor: pointer;
         }
         .input{
             position: relative;
@@ -116,29 +132,86 @@ Container.body = styled.div`
             .slc-cat{
                 width: 90%;
                 max-width: 100%;
-                /* text-align:center; */
-                font-size: 22px;
+                font-size: 16px;
                 padding: 5px;
                 padding-left: 50px;
+                text-transform: capitalize;
+                -webkit-touch-callout: none; // iOS Safari
+                -webkit-user-select: none; // Safari
+                -khtml-user-select: none; // Konqueror HTML
+                -moz-user-select: none; // Old versions of Firefox
+                -ms-user-select: none; // Internet Explorer/Edge
+                user-select: none; 
             }
         }
         .catagery{
-            width: 420px;
+            width: 415px;
             max-height: 150px;
             height: 150px;
             overflow: auto;
             z-index: 999;
-            background-color: #e8e8e8;
+            background-color: white;
+            border-radius: 2px;
             position: sticky;
-            display: grid;
+            border: 0.5px solid #E1E1E1;
+            border-radius: 5px;
+
+            -webkit-touch-callout: none; // iOS Safari
+            -webkit-user-select: none; // Safari
+            -khtml-user-select: none; // Konqueror HTML
+            -moz-user-select: none; // Old versions of Firefox
+            -ms-user-select: none; // Internet Explorer/Edge
+            user-select: none;
             .ctg{
+                display: flex;
+                align-items: center;
                 height: 25%;
+                font-size: 16px;
+                padding: 2px;
+                padding-left: 15px;
+                font-weight: 400;
+                text-transform: capitalize;
+                cursor: pointer;
+                span{
+                    padding-left: 20px;
+                }
+                :hover{
+                    background-color: #E1E1E1;
+                }
             }
         }
     }
 `
 
-Container.btns = styled.div``
+Container.btns = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 10px;
+    height: 7%;
+    padding: 5px;
+    .btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 130%;
+        gap: 8px;
+        border-radius: 8px;
+    }
+`
 
+const Btns = styled.p`
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 0.8px solid ${({ color }) => color ? color : 'black'};
+    color: ${({ color }) => color ? color : 'black'};
+    :hover{
+        background-color: ${({ color }) => color ? color : ''};
+        color: white;
+    }
 
-export { Main, Container, BigContainer }
+`
+
+export { Main, Container, BigContainer, Btns }
